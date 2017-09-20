@@ -55,10 +55,14 @@ class Fraction(object):
     
     def __mul__(self, other):
         """
-        6.2 Multiplies two fractions
+        6.2 & 8 Multiplies two fractions or an integer and fraction.
         """
-        return Fraction((self._numerator * other._numerator), 
-                         self._denominator * other._denominator)
+        if isinstance(other,int):
+            numerator = other * self._numerator
+            return Fraction(numerator,self._denominator)
+        else:
+            return Fraction((self._numerator * other._numerator), 
+                             self._denominator * other._denominator)
 
     def __div__(self, other):
         """
@@ -85,5 +89,6 @@ class Fraction(object):
         common_divisor = self.gcd()
         return Fraction(self._numerator/common_divisor, 
                         self._denominator/common_divisor)
-        
+    
+    
     

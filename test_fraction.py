@@ -12,3 +12,4 @@ if __name__ == '__main__':
     print f1 * f2
     print f2 / f1
     print f3.simplify()
+    print f1 * 4
