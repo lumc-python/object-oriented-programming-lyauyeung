@@ -1,9 +1,10 @@
 from fraction import Fraction
 
 if __name__ == '__main__':
-    f1 = Fraction(1, 2)
+    f1 = Fraction(1, 3)
     f2 = Fraction(10, 2)
     f3 = Fraction(3, 6)
+    f4 = Fraction(1, 4)
     print f1
     print f1 + f2
     print f1.invert()
@@ -13,3 +14,4 @@ if __name__ == '__main__':
     print f2 / f1
     print f3.simplify()
     print f1 * 4
+    print f1 == f4

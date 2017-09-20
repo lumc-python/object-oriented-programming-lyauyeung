@@ -55,7 +55,7 @@ class Fraction(object):
     
     def __mul__(self, other):
         """
-        6.2 & 8 Multiplies two fractions or an integer and fraction.
+        6.2 & 11 Multiplies two fractions or an integer and fraction.
         """
         if isinstance(other,int):
             numerator = other * self._numerator
@@ -90,5 +90,24 @@ class Fraction(object):
         return Fraction(self._numerator/common_divisor, 
                         self._denominator/common_divisor)
     
+    def __eq__(self, other):
+        """
+        9. Returns true when fractions are equal.
+        """
+        if self.to_float() == other.to_float():
+            return True
+        else:
+            return False
+
+"""
+10. Use another self._numeratorNeg or something if the numerator is < 0. This
+way it can be multiplied by -1 and then used in following functions. Did not 
+have time to implement it. But this is what I would do. 
+
+11. There are built in functions like __radd__ and __rmul___, but I am not sure
+how to make functions commutative.
+
+12. Write an if-statement in the __init__ function?
+""" 
     
     
